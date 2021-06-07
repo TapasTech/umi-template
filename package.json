@@ -5,7 +5,7 @@
   "scripts": {
     "start": "UMI_ENV=local umi dev",
     "build:staging": "UMI_ENV=stage BABEL_POLYFILL=none umi build",
-    "build:production": "UMI_ENV=prod BABEL_POLYFILL=none umi build",
+    "build:master": "UMI_ENV=prod BABEL_POLYFILL=none umi build",
     "prepare": "husky install",
     "lint:ls": "ls-lint",
     "analyze": "ANALYZE=1 UMI_ENV=stage umi build",
