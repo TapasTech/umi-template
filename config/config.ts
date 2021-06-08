@@ -1,11 +1,11 @@
-import path from 'path';
-import fs from 'fs';
+// import path from 'path';
+// import fs from 'fs';
 import { defineConfig } from 'umi';
 import chainWebpack from './webpack.config';
 
-const lessToJS = require('less-vars-to-js');
+// const lessToJS = require('less-vars-to-js');
 
-const antdTheme = lessToJS(fs.readFileSync(path.join(__dirname, '../src/styles/antd/antd-custom.less'), 'utf8'));
+// const antdTheme = lessToJS(fs.readFileSync(path.join(__dirname, '../src/styles/antd/antd-custom.less'), 'utf8'));
 
 export default defineConfig({
   hash: true,
@@ -21,7 +21,7 @@ export default defineConfig({
     APP_ENV: process.env.UMI_ENV,
   },
   webpack5: {},
-  theme: antdTheme,
+  // theme: antdTheme,
   title: 'template-title',
   metas: [
     {
