@@ -7,7 +7,11 @@
 ```sh
 # 比如说新建一个 waic2021-fe 项目
 
+# 默认 main分支 -> 后台系统
 git clone https://github.com/TapasTech/umi-template waic2021-fe
+
+# 或者 h5-umi-template 分支 -> 前台网站 或 营销h5等
+git clone -b h5-umi-template https://github.com/TapasTech/umi-template waic2021-fe
 
 cd waic2021-fe
 
