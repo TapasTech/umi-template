@@ -1,9 +1,8 @@
 import React from 'react';
-
-import { Redirect } from 'umi';
+import styles from './index.less';
 
 function Home() {
-  return <Redirect to="/dashboard/analysis" />;
+  return <div className={styles.home}>Home</div>;
 }
 
 Home.requireSignin = false;

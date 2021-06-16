@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { request, useModel } from 'umi';
-import { loadScript, getToken, setToken, getRememberme, setRememberme, clearAll } from '@/utils';
+import { getToken, setToken, getRememberme, setRememberme, clearAll } from '@/utils';
 
 export default function useLoginModel() {
   const initState = useModel('@@initialState');
@@ -8,12 +8,6 @@ export default function useLoginModel() {
   const [isRememberme, setCurrentRememberme] = useState(!!getRememberme());
 
   const { refresh } = initState;
-
-  const initBackground = useCallback(() => {
-    loadScript('/bg/particles.js', 'particlesJS').then(particlesJS => {
-      particlesJS.load('bg-animate', '/bg/particlesjs-config.json');
-    });
-  }, []);
 
   const toggleRememberme = useCallback(() => {
     const nextState = !isRememberme;
@@ -49,7 +43,6 @@ export default function useLoginModel() {
   }, [refresh]);
 
   return {
-    initBackground,
     currentToken,
     isRememberme,
     toggleRememberme,
